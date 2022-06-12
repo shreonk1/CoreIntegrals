@@ -1,0 +1,35 @@
+name: JoeyEssentials
+version: '${project.version}'
+main: me.joeyessentials.JoeyEssentials
+api-version: 1.18
+description: Plugin For My own stuff
+
+commands:
+  broadcast:
+    description: broadcasts a message to the server
+  broadcasthelp:
+    description: broadcast help menu
+  screenbroadcast:
+    description: Broadcasts a message onto everybodies screen
+  help:
+    description: disabled the default help command
+  clearchat:
+    description: clears the ingame chat
+  setMotd:
+    description: sets the Motd of the server
+  motd:
+    description: sends the motd of the server
+  gamem:
+    description: commands for my ChangeGamemodeGUI
+
+permissions:
+  joeyessentials.motd.set:
+    description: set the servers motd
+    default: false
+  joeyessentials.motd.*:
+    description: permission to all motd commands
+    default: op
+  joeyessentials.broadcast:
+    description: permission to broadcast on the server
+    default: false
+
