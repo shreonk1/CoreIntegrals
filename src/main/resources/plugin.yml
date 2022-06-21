@@ -21,8 +21,20 @@ commands:
     description: sends the motd of the server
   gamem:
     description: commands for my ChangeGamemodeGUI
+  joeypermissions:
+    description: Commands for the custom Permissions menu
+  heal:
+    description: Heals a player
+  feed:
+    description: Feed a player
 
 permissions:
+  joeyessentials.gamem.opengui:
+    description: opens the gui for the gamemode change
+    default: op
+  joeyessentials.gamem.*:
+    description: permission to all custom gamemode commands
+    default: op
   joeyessentials.motd.set:
     description: set the servers motd
     default: false
@@ -32,4 +44,5 @@ permissions:
   joeyessentials.broadcast:
     description: permission to broadcast on the server
     default: false
+
 

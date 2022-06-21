@@ -8,7 +8,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.ItemStack;
 
-public class InventoryClickListener implements Listener {
+public class GamemodeGUIClickListener implements Listener {
 
     @EventHandler
     public void onInventoryClick(InventoryClickEvent e) {
@@ -35,5 +35,5 @@ public class InventoryClickListener implements Listener {
             p.setGameMode(GameMode.SPECTATOR);
             p.sendMessage(Utils.color("&6Updated Gamemode to Adventure Mode!"));
         }
+        }
     }
-}
