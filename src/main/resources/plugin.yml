@@ -1,5 +1,5 @@
 name: JoeyEssentials
-version: '${project.version}'
+version: 1.1.0
 main: me.joeyessentials.JoeyEssentials
 api-version: 1.18
 description: Plugin For My own stuff
@@ -27,6 +27,12 @@ commands:
     description: Heals a player
   feed:
     description: Feed a player
+  back:
+    description: Teleports a player to their last location
+  ban:
+    description: bans a specific user
+  staffhelp:
+    description: help menu for all staff perks.
 
 permissions:
   joeyessentials.gamem.opengui:
@@ -44,5 +50,24 @@ permissions:
   joeyessentials.broadcast:
     description: permission to broadcast on the server
     default: false
+  joeyessentials.commands.helpingplayers.back:
+    description: teleports a player to their last location
+    default: true
+  joeyessentials.commands.helpingplayers.feed:
+    description: feeds a player
+    default: op
+  joeyessentials.commands.helpingplayers.heal:
+    description: heals a player
+    default: op
+  joeyessentials.commands.staff.punishments.ban:
+    description: bans a player
+    default: op
+  joeyessentials.commands.staff.punishments.kick:
+    description: kicks a player
+    default: op
+  joeyessentials.commands.staff.punishments.mute:
+    description: mutes a player
+    default: op
+
 
 

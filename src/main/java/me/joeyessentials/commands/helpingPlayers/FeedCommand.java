@@ -12,7 +12,7 @@ public class FeedCommand implements CommandExecutor {
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
         Player player = (Player) sender;
         if(command.getName().equalsIgnoreCase("feed")) {
-            if(player.hasPermission("joeyessentials.helpingplayers.feed")) {
+            if(player.hasPermission("joeyessentials.commands.helpingplayers.feed")) {
                 player.setFoodLevel(20);
                 player.sendMessage(Utils.color("&aYou have healed " + "&e" + player.getName()));
             }else {

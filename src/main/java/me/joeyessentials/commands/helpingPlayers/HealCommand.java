@@ -13,7 +13,7 @@ public class HealCommand implements CommandExecutor {
 
         if (command.getName().equalsIgnoreCase("heal")) {
             Player player = (Player) sender;
-            if (player.hasPermission("joeyessentials.helpplayers.heal")) {
+            if (player.hasPermission("joeyessentials.commands.helpplayers.heal")) {
                 player.setHealth(20);
                 player.sendMessage(Utils.color("&aYou have healed " + "&e" + player.getName()));
             } else {
