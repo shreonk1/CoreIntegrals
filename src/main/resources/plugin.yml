@@ -1,8 +1,8 @@
-name: JoeyEssentials
+name: coreintegrals
 version: 1.2.1
-main: me.joeyessentials.JoeyEssentials
+main: me.shrob.coreintegrals
 api-version: 1.19
-description: Plugin For My own stuff
+description: CoreIntegrals is a plugin for all of your servers essential commands, and needs!
 
 commands:
   broadcast:
@@ -53,87 +53,82 @@ commands:
   nickname:
     aliases: [nick]
     description: sets a players nickname
-  jereload:
+  cireload:
     description: reloads the plugin config
 
 permissions:
-  joeyessentials.reload:
+  coreintegrals.reload:
     description: reloads config file
     default: op
-  joeyessentials.commands.gamemode.opengui:
+  coreintegrals.commands.gamemode.opengui:
     description: opens the gui for the gamemode change
     default: op
-  joeyessentials.commands.gamemode.*:
+  coreintegrals.commands.gamemode.*:
     description: permission to all custom gamemode commands
     default: op
-  joeyessentials.misc.motd.set:
+  coreintegrals.misc.motd.set:
     description: set the servers motd
     default: false
-  joeyessentials.misc.motd.*:
+  coreintegrals.misc.motd.*:
     description: permission to all motd commands
     default: op
-  joeyessentials.commands.broadcast:
+  coreintegrals.commands.broadcast:
     description: permission to broadcast on the server
     default: false
-  joeyessentials.commands.broadcast.screen:
+  coreintegrals.commands.broadcast.screen:
     description: permission to broadcast a message on everybodies screen#
     default: op
-  joeyessentials.commands.helpingplayers.back:
+  coreintegrals.commands.helpingplayers.back:
     description: teleports a player to their last location
     default: true
-  joeyessentials.commands.helpingplayers.feed:
+  coreintegrals.commands.helpingplayers.feed:
     description: feeds a player
     default: op
-  joeyessentials.commands.helpingplayers.heal:
+  coreintegrals.commands.helpingplayers.heal:
     description: heals a player
     default: op
-  joeyessentials.commands.helpingplayers.openenderchest:
+  coreintegrals.commands.helpingplayers.openenderchest:
     description: opens your enderchest
     default: true
-  joeyessentials.commands.staff.enderchest:
+  coreintegrals.commands.staff.enderchest:
     description: opens a players enderchest
     default: op
-  joeyessentials.commands.staff.punishments.ban:
+  coreintegrals.commands.staff.punishments.ban:
     description: bans a player
     default: op
-  joeyessentials.commands.staff.punishments.kick:
+  coreintegrals.commands.staff.punishments.kick:
     description: kicks a player
     default: op
-  joeyessentials.commands.staff.punishments.mute:
+  coreintegrals.commands.staff.punishments.mute:
     description: mutes a player
     default: op
-  joeyessentials.commands.staff.staffchat:
+  coreintegrals.commands.staff.staffchat:
     description: permission to access the mc staff chat
     default: op
-  joeyessentials.commands.permissions.openpermissionmenu:
+  coreintegrals.commands.permissions.openpermissionmenu:
     description: permission to open and use the permission menu
     default: op
-  joeyessentials.commands.helpingplayers.god:
+  coreintegrals.commands.helpingplayers.god:
     description: makes a player Invulnerable
     default: false
-  joeyessentials.commands.staff.invsee:
+  coreintegrals.commands.staff.invsee:
     description: opens the inventory of a fellow player to edit
     default: false
-  joeyessentials.kits.selectkit:
+  coreintegrals.kits.selectkit:
     description: opens the inventory to select your custom kit
     default: true
-  joeyessentials.kits.managekits:
+  coreintegrals.kits.managekits:
     description: Manage custom kits
     default: false
-  joeyessentials.kits.editkits:
+  coreintegrals.kits.editkits:
     description: Edit custom kits
     default: false
-  joeyessentials.kits.createkits:
+  coreintegrals.kits.createkits:
     description: Create custom kits
     default: false
-  joeyessentials.commands.staff.punishments.freeze:
+  coreintegrals.commands.staff.punishments.freeze:
     description: freeze a player
     default: op
-  joeyessentials.commands.funstuff.nickname:
+  coreintegrals.commands.funstuff.nickname:
     description: sets a players nickname
     default: false
-
-
-
-
-
