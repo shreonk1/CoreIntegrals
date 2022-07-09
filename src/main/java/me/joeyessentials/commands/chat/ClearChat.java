@@ -1,5 +1,6 @@
 package me.joeyessentials.commands.chat;
 
+import me.joeyessentials.JoeyEssentials;
 import me.joeyessentials.Utils;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
@@ -9,11 +10,16 @@ import org.bukkit.entity.Player;
 
 public class ClearChat implements CommandExecutor {
 
+    JoeyEssentials main;
+    public ClearChat(JoeyEssentials main) {
+        this.main = main;
+    }
+
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         if(cmd.getName().equalsIgnoreCase("clearchat")) {
             Player player = (Player) sender;
-            if(player.hasPermission("joeyessentials.chat.clearchat")) {
+            if(player.hasPermission("joeyessentials.commands.chat.clearchat")) {
 
                 // about two hundred messages of nothing to guarantee a cleared chat.
                 Bukkit.broadcastMessage("");
@@ -281,7 +287,7 @@ public class ClearChat implements CommandExecutor {
 
 
             }else {
-                player.sendMessage(Utils.color("&cYou do not have permission to do this! Please talk to an Admin to get this sorted."));
+                player.sendMessage(main.getConfig().getString("messages.nopermission").replace("%command%", "/clearchat").replace("<red>", "§c"));
             }
 
         }

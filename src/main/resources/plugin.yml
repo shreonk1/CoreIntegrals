@@ -1,5 +1,5 @@
 name: JoeyEssentials
-version: 1.1.0
+version: 1.2.1
 main: me.joeyessentials.JoeyEssentials
 api-version: 1.19
 description: Plugin For My own stuff
@@ -21,7 +21,7 @@ commands:
     description: sends the motd of the server
   gamem:
     description: commands for my ChangeGamemodeGUI
-  joeypermissions:
+  editperms:
     description: Commands for the custom Permissions menu
   heal:
     description: Heals a player
@@ -33,23 +33,51 @@ commands:
     description: bans a specific user
   staffhelp:
     description: help menu for all staff perks.
+  staffchat:
+    aliases: [staffc, sc, staffmsg, staffm, sm]
+    description: custom staff chat
+  god:
+    description: makes a player invulnerable
+  invsee:
+    description: open and edit a players inventory.
+  kits:
+    description: server kits for players.
+  enderchest:
+    aliases: [ec]
+    description: opens another players enderchest
+  openenderchest:
+    aliases: [oec]
+    description: opens your own ender chest
+  freeze:
+    description: freezes a player
+  nickname:
+    aliases: [nick]
+    description: sets a players nickname
+  jereload:
+    description: reloads the plugin config
 
 permissions:
-  joeyessentials.gamem.opengui:
+  joeyessentials.reload:
+    description: reloads config file
+    default: op
+  joeyessentials.commands.gamemode.opengui:
     description: opens the gui for the gamemode change
     default: op
-  joeyessentials.gamem.*:
+  joeyessentials.commands.gamemode.*:
     description: permission to all custom gamemode commands
     default: op
-  joeyessentials.motd.set:
+  joeyessentials.misc.motd.set:
     description: set the servers motd
     default: false
-  joeyessentials.motd.*:
+  joeyessentials.misc.motd.*:
     description: permission to all motd commands
     default: op
-  joeyessentials.broadcast:
+  joeyessentials.commands.broadcast:
     description: permission to broadcast on the server
     default: false
+  joeyessentials.commands.broadcast.screen:
+    description: permission to broadcast a message on everybodies screen#
+    default: op
   joeyessentials.commands.helpingplayers.back:
     description: teleports a player to their last location
     default: true
@@ -58,6 +86,12 @@ permissions:
     default: op
   joeyessentials.commands.helpingplayers.heal:
     description: heals a player
+    default: op
+  joeyessentials.commands.helpingplayers.openenderchest:
+    description: opens your enderchest
+    default: true
+  joeyessentials.commands.staff.enderchest:
+    description: opens a players enderchest
     default: op
   joeyessentials.commands.staff.punishments.ban:
     description: bans a player
@@ -68,6 +102,38 @@ permissions:
   joeyessentials.commands.staff.punishments.mute:
     description: mutes a player
     default: op
+  joeyessentials.commands.staff.staffchat:
+    description: permission to access the mc staff chat
+    default: op
+  joeyessentials.commands.permissions.openpermissionmenu:
+    description: permission to open and use the permission menu
+    default: op
+  joeyessentials.commands.helpingplayers.god:
+    description: makes a player Invulnerable
+    default: false
+  joeyessentials.commands.staff.invsee:
+    description: opens the inventory of a fellow player to edit
+    default: false
+  joeyessentials.kits.selectkit:
+    description: opens the inventory to select your custom kit
+    default: true
+  joeyessentials.kits.managekits:
+    description: Manage custom kits
+    default: false
+  joeyessentials.kits.editkits:
+    description: Edit custom kits
+    default: false
+  joeyessentials.kits.createkits:
+    description: Create custom kits
+    default: false
+  joeyessentials.commands.staff.punishments.freeze:
+    description: freeze a player
+    default: op
+  joeyessentials.commands.funstuff.nickname:
+    description: sets a players nickname
+    default: false
+
+
 
 
 

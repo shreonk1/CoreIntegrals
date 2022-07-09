@@ -1,1 +1,10 @@
 newplayerwelcomemessage: welcome to the server, enjoy!
+
+messages:
+  nonicknamegiven: "<red>This is not a valid nickname!"
+  reloadplugin: "<green>Plugin reloaded"
+  invalidcommand: "<red>Invalid Command!"
+  nopermission: "<red>You do not have permission to use %command%!"
+  nomessagegiven: "<red>You did not include a message!"
+  invaliduser: "<red>Invalid user!"
+  invalidreason: "<red>Invalid reason!"

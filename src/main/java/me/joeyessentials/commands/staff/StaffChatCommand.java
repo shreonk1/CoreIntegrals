@@ -22,7 +22,7 @@ public class StaffChatCommand implements CommandExecutor {
             if (player.hasPermission("joeyessentials.commands.staff.staffchat")) {
 
             } else {
-                player.sendMessage(Utils.color("&cOnly staff can use this command!"));
+                player.sendMessage(main.getConfig().getString("messages.nopermission").replace("%command%", "§c"));
             }
 
             if (args.length < 1) {

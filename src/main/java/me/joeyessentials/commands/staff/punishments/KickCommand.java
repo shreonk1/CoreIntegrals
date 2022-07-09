@@ -1,5 +1,6 @@
 package me.joeyessentials.commands.staff.punishments;
 
+import me.joeyessentials.JoeyEssentials;
 import me.joeyessentials.Utils;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
@@ -9,6 +10,11 @@ import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
 public class KickCommand implements CommandExecutor {
+
+    JoeyEssentials main;
+    public KickCommand(JoeyEssentials main) {
+        this.main = main;
+    }
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
         Player player = (Player) sender;
@@ -21,9 +27,11 @@ public class KickCommand implements CommandExecutor {
         if(player.hasPermission("joeyessentials.commands.staff.punishments.ban")) {
             player.kick();
             player.sendMessage("&b[" + player.getName() + "] " + "&aHas kicked " + kickedUser + "," +  "&cReason: " + args[1] );
+        }else {
+            player.sendMessage(main.getConfig().getString("messages.nopermission").replace("%command%", "/kick").replace("<red>", "§c"));
         }
         if(!Bukkit.getOnlinePlayers().contains(kickedUser)) {
-            sender.sendMessage(Utils.color("&cPlease select a user to kick!"));
+            player.sendMessage(main.getConfig().getString("invaliduser").replace("<red>", "§c"));
         }
         return false;
     }
