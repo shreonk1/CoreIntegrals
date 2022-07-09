@@ -17,7 +17,7 @@ public class ReloadCommand implements CommandExecutor {
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
         Player player = (Player) sender;
-        if(command.getName().equalsIgnoreCase("jereload")) {
+        if(command.getName().equalsIgnoreCase("cireload")) {
             if(player.hasPermission("coreintegrals.reload")) {
                 long timeBefore = System.currentTimeMillis();
                 main.loadConfigValues();
@@ -26,7 +26,7 @@ public class ReloadCommand implements CommandExecutor {
                 long timeTaken = timeAfter - timeBefore;
                 sender.sendMessage(Utils.color("&aReloaded Config, took: " + timeTaken + "ms."));
             }else {
-                player.sendMessage(main.getConfig().getString("messages.nopermission").replace("%command%", "/jereload").replace("<green>","§a"));
+                player.sendMessage(main.getConfig().getString("messages.nopermission").replace("%command%", "/cireload").replace("<green>","§a"));
             }
         }
         return false;

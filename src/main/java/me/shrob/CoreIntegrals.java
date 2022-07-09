@@ -52,7 +52,7 @@ public final class CoreIntegrals extends JavaPlugin implements Listener {
         getCommand("gamem").setTabCompleter(new GamemodeTabCompleter());
         getCommand("editperms").setExecutor(new PermissionMenuInv(this));
         getCommand("editperms").setTabCompleter(new PermissionsMenuCompleter());
-        getCommand("jereload").setExecutor(new ReloadCommand(this));
+        getCommand("cireload").setExecutor(new ReloadCommand(this));
         getCommand("staffhelp").setExecutor(new StaffHelp(this));
         getCommand("staffchat").setExecutor(new StaffChatCommand(this));
         getCommand("invsee").setExecutor(new InventorySeeCommand(this));

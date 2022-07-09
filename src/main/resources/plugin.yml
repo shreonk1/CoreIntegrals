@@ -1,6 +1,6 @@
 name: coreintegrals
-version: 1.2.1
-main: me.shrob.coreintegrals
+version: 1.2.2
+main: me.shrob.CoreIntegrals
 api-version: 1.19
 description: CoreIntegrals is a plugin for all of your servers essential commands, and needs!
 
@@ -57,6 +57,9 @@ commands:
     description: reloads the plugin config
 
 permissions:
+  coreintegrals.*:
+    default: op
+    description: operator access to the plugin
   coreintegrals.reload:
     description: reloads config file
     default: op
