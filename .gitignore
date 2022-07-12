@@ -1,5 +1,5 @@
 pom.xml
 JoeyEssentials.iml
-target/
-src/
-.idea/
+target
+src
+.idea
