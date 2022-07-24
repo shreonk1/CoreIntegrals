@@ -1,5 +1,14 @@
 newplayerwelcomemessage: welcome to the server, enjoy!
 
+scoreboard:
+  scoreboardtitle: "&1-----ScoreBoard-----"
+  scoreboardline1: "&bIn-game Name: &a&o%player%"
+  scoreboardline2: "&bBalance: &a&o$%balance%"
+  scoreboardline3: "&bno"
+  scoreboardline4: "&bgg"
+  scoreboardline5: "&bhh"
+  scoreboardline6: "&a%motd%"
+
 messages:
   nonicknamegiven: "<red>This is not a valid nickname!"
   reloadplugin: "<green>Plugin reloaded"
@@ -8,3 +17,11 @@ messages:
   nomessagegiven: "<red>You did not include a message!"
   invaliduser: "<red>Invalid user!"
   invalidreason: "<red>Invalid reason!"
+  playerafk: "<cyan>%player% is currently afk."
+  playernotafk: "<cyan>%player% is not afk."
+  youareafk: "<cyan>You are currently afk."
+  youarenotafk: "<cyan>You are no lonegr afk."
+  vanish: "<green>You are now in vanish!"
+  unvanish: "<green> You are no longer in vanish!"
+  fix: "<cyan>Fixed <green>%helditem% <cyan>for $5000"
+  notenoughmoney: "<red>You do not have enough money to do this!"

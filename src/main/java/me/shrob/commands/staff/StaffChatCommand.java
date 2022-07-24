@@ -22,7 +22,7 @@ public class StaffChatCommand implements CommandExecutor {
             if (player.hasPermission("coreintegrals.commands.staff.staffchat")) {
 
             } else {
-                player.sendMessage(main.getConfig().getString("messages.nopermission").replace("%command%", "§c"));
+                player.sendMessage(main.getConfig().getString("messages.nopermission").replace("%command%", "staffchat").replace("<red>", "§c"));
             }
 
             if (args.length < 1) {

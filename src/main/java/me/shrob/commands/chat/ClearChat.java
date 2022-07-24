@@ -21,7 +21,7 @@ public class ClearChat implements CommandExecutor {
             Player player = (Player) sender;
             if(player.hasPermission("coreintegrals.commands.chat.clearchat")) {
 
-                for(int i = 1; i > 200; i++) {
+                for(int i = 1; i < 200; i++) {
                     Bukkit.broadcastMessage(" ");
 
                 }

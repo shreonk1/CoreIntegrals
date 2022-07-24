@@ -2,6 +2,7 @@ package me.shrob.commands.helpingPlayers;
 
 import me.shrob.CoreIntegrals;
 import me.shrob.Utils;
+import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -17,6 +18,7 @@ public class GodCommand implements CommandExecutor {
         this.main = main;
     }
     ArrayList<Player> godmode = new ArrayList<>();
+
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
         if(command.getName().equalsIgnoreCase("god")) {
