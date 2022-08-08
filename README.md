@@ -47,26 +47,33 @@ This plugin requires Vault to use due to economical commands!
 - Barrier <Amount> - Give yourself a specified amount of barriers
 - Debugstick <Amount> Give yourself a specified amount of debug sticks
 - Lightblock <Amount> Give yourself a specified amount of light blocks
+- Vanish -  Vanish ingame so nobody else can see you
+- Sudo - Sudoing a player will make them say or do any command!
   
 ## Config Messages:
-- nonicknamegiven: "<red>This is not a valid nickname!"
-- reloadplugin: "<green>Plugin reloaded"
-- invalidcommand: "<red>Invalid Command!"
-- nopermission: "<red>You do not have permission to use %command%!"
-- nomessagegiven: "<red>You did not include a message!"
-- invaliduser: "<red>Invalid user!"
-- invalidreason: "<red>Invalid reason!"
-- playerafk: "<cyan>%player% is currently afk."
-- playernotafk: "<cyan>%player% is not afk."
-- youareafk: "<cyan>You are currently afk."
-- youarenotafk: "<cyan>You are no lonegr afk."
-- vanish: "<green>You are now in vanish!"
-- unvanish: "<green> You are no longer in vanish!"
-- fix: "<cyan>Fixed <green>%helditem% <cyan>for $5000"
-- notenoughmoney: "<red>You do not have enough money to do this!"
-#### These all contain a colour inside of <> before hand to edit the colour when sent, this is not changeable as of now
+- nonicknamegiven: "&cThis is not a valid nickname!"
+  reloadplugin: "&aPlugin reloaded"
+  invalidcommand: "&cInvalid Command!"
+  nopermission: "&cYou do not have permission to use %command%!"
+  nomessagegiven: "&cYou did not include a message!"
+  nouser: "&cNo user provided"
+  playeroffline: "&c%player% is not online"
+  invaliduser: "&cInvalid user!"
+  invalidreason: "&cInvalid reason!"
+  playerafk: "&3%player% is currently afk."
+  playernotafk: "&3%player% is not afk."
+  youareafk: "&3You are currently afk."
+  youarenotafk: "&3You are no lonegr afk."
+  vanish: "&aYou are now in vanish!"
+  playerjustvanished: "&a%player% just vanished!"
+  playerjustunvanished: "&a%player% just unvanished!"
+  unvanish: "&a You are no longer in vanish!"
+  fix: "&3Fixed &a%helditem% &3for $5000"
+  notenoughmoney: "&cYou do not have enough money to do this!"
+  spawnset: "&a You have set the current spawn point to: %x, %y%, %z%"
+####Changing the & code will change the color of the message!
 
 ## Links or socials:
-- Discord server with github updates: [[https://discord.gg/b7q6GRKQXp](https://discord.gg/b7q6GRKQXp)]
-- My discord: Shrob#6875 (Please message me in either me or my discord if you have feedback!)
-- Github: [[https://github.com/shreonk1](https://github.com/shreonk1)]
+###Discord server with github updates: [[https://discord.gg/b7q6GRKQXp](https://discord.gg/b7q6GRKQXp)]
+###My discord: Shrob#6875 (Please message me in either me or my discord if you have feedback!)
+###Github: [[https://github.com/shreonk1](https://github.com/shreonk1)]
