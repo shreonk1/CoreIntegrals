@@ -21,7 +21,7 @@ public class GiveThreeByThreePickaxe implements CommandExecutor {
             if(player.hasPermission("coreintegrals.customitems.threebythreepickaxe")) {
                 ThreeByThreePickaxe.giveItem(player);
             }else {
-                player.sendMessage(main.getConfig().getString("messages.nopermission").replace("%command%", "/threebythree").replace("<red>", "§c"));
+                player.sendMessage(main.getConfig().getString("messages.nopermission").replace("%command%", "/threebythree").replace("&", "§"));
             }
         }
         return false;

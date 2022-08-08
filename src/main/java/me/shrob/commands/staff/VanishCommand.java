@@ -17,17 +17,27 @@ public class VanishCommand implements CommandExecutor {
     }
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
-        if(command.getName().equalsIgnoreCase("vanish")) {
+        if (command.getName().equalsIgnoreCase("vanish")) {
             Player player = (Player) sender;
-            if(player.hasPermission("coreintegrals.commands.staff.vanish")) {
-                ArrayList<Player> vanishplayers = new ArrayList<>();
-
-                for(Player p : Bukkit.getOnlinePlayers()) {
-                    if(player.hasPermission("coreintegrals.commands.staff.vanish")) {
+            if (player.hasPermission("coreintegrals.commands.staff.vanish")) {
+                if(main.vanishPlayers.contains(player)) {
+                    for(Player people : Bukkit.getOnlinePlayers()) {
+                        people.showPlayer(main, player);
                     }
+                    main.vanishPlayers.remove(player);
+                    player.sendMessage(main.getConfig().getString("messages.unvanish").replace("&", "§"));
+                } else if (!main.vanishPlayers.contains(player)) {
+                    for(Player people : Bukkit.getOnlinePlayers()) {
+                        people.hidePlayer(main, player);
+                    }
+                    main.vanishPlayers.add(player);
+                    player.sendMessage(main.getConfig().getString("messages.vanish").replace("&", "§"));
                 }
-            }else {
-                player.sendMessage(main.getConfig().getString("messages.vanish").replace("%command%", "/vanish").replace("<green>", "§3"));
+            }
+            for(Player perms : Bukkit.getOnlinePlayers()) {
+                if(player.hasPermission("coreintegrals.commands.staff.vanish")) {
+                    player.showPlayer(main, player);
+                }
             }
         }
         return false;

@@ -33,7 +33,7 @@ public class InventoryClickListener implements Listener {
                     kitsmanagergui.createGui(player);
                 } else {
                     player.closeInventory();
-                    player.sendMessage(main.getConfig().getString("messages.nopermission").replace("%command%", "/kitmanager").replace("<red>", "§c"));
+                    player.sendMessage(main.getConfig().getString("messages.nopermission").replace("%command%", "/kitmanager").replace("&", "§"));
                 }
             }
         }
@@ -59,7 +59,7 @@ public class InventoryClickListener implements Listener {
                     EditKitsGui kiteditorgui = new EditKitsGui();
                     kiteditorgui.createGui(player);
                 }else {
-                    player.sendMessage(main.getConfig().getString("messages.nopermission").replace("%command%", "/kiteditor").replace("<red>","§c"));
+                    player.sendMessage(main.getConfig().getString("messages.nopermission").replace("%command%", "/kiteditor").replace("&", "§"));
                 }
             }
         }
@@ -85,7 +85,7 @@ public class InventoryClickListener implements Listener {
                     CreateKitsGui kitcreatorgui = new CreateKitsGui();
                     kitcreatorgui.createGui(player);
                 }else {
-                    player.sendMessage(main.getConfig().getString("messages.nopermission").replace("%command%", "/kitcreator").replace("<red>", "§c"));
+                    player.sendMessage(main.getConfig().getString("messages.nopermission").replace("%command%", "/kitcreator").replace("&", "§"));
                 }
             }
         }

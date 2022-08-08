@@ -20,7 +20,7 @@ public class WorkbenchCommand implements CommandExecutor {
             if(player.hasPermission("coreintegrals.commands.useful.workbench")) {
                 player.openWorkbench(null, true);
             }else {
-                player.sendMessage(main.getConfig().getString("nopermission").replace("%command%", "/workbench").replace("<red>", "§c"));
+                player.sendMessage(main.getConfig().getString("nopermission").replace("%command%", "/workbench").replace("&", "§"));
             }
         }
         return false;

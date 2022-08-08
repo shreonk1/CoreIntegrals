@@ -22,7 +22,7 @@ public class OpenGamemodeInv implements CommandExecutor {
             if (command.getName().equalsIgnoreCase("gamem")) {
                 if (player.hasPermission("coreintegrals.commands.gamemode.opengui")) {
                     if (args.length < 1) {
-                        player.sendMessage(main.getConfig().getString("messages.invalidcommand").replace("<red>", "§c"));
+                        player.sendMessage(main.getConfig().getString("messages.invalidcommand").replace("&", "§"));
                     }
                     if (args[0].equalsIgnoreCase("opengui")) {
                         GUI gui = new GUI();
@@ -30,7 +30,7 @@ public class OpenGamemodeInv implements CommandExecutor {
 
                     }
                 }else {
-                    player.sendMessage(main.getConfig().getString("messages.nopermission").replace("%command%", "/gamem").replace("<red>", "§c"));
+                    player.sendMessage(main.getConfig().getString("messages.nopermission").replace("%command%", "/gamem").replace("&", "§"));
                 }
             }
         }

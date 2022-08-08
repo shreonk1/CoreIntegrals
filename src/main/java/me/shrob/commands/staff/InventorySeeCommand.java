@@ -31,7 +31,7 @@ public class InventorySeeCommand implements CommandExecutor {
                 player.openInventory(playerinventory);
                 player.sendMessage(Utils.color("&aYou are currently editing: " + "&b" + player.getName() + "'s " + "&ainventory!"));
             }else {
-                player.sendMessage(main.getConfig().getString("messages.nopermission").replace("%command%", "/invsee").replace("<red>", "§c"));
+                player.sendMessage(main.getConfig().getString("messages.nopermission").replace("%command%", "/invsee").replace("&", "§"));
             }
         }
         return false;

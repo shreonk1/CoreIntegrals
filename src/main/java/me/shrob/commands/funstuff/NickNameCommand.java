@@ -20,14 +20,14 @@ public class NickNameCommand implements CommandExecutor {
             Player player = (Player) sender;
             if(player.hasPermission("coreintegrals.commands.funstuff.nickname")) {
                 if(args.length < 1) {
-                    main.getConfig().getString("messages.nonicknamegiven").replace("<red>", "§c");
+                    main.getConfig().getString("messages.nonicknamegiven").replace("&", "§");
                 }
                 String nick = String.join(" ", args);
                 nick = ChatColor.translateAlternateColorCodes('&', nick);
 
                 player.setDisplayName(nick);
             }else {
-                player.sendMessage(main.getConfig().getString("messages.nopermission".replace("%command%", "/nickname").replace("<red>", "§c")));
+                player.sendMessage(main.getConfig().getString("messages.nopermission".replace("%command%", "/nickname").replace("&", "§")));
             }
         }
         return false;

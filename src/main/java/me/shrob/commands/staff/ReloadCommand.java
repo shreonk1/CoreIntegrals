@@ -26,7 +26,7 @@ public class ReloadCommand implements CommandExecutor {
                 long timeTaken = timeAfter - timeBefore;
                 sender.sendMessage(Utils.color("&aReloaded Config, took: " + timeTaken + "ms."));
             }else {
-                player.sendMessage(main.getConfig().getString("messages.nopermission").replace("%command%", "/cireload").replace("<green>","§a"));
+                player.sendMessage(main.getConfig().getString("messages.nopermission").replace("%command%", "/cireload").replace("&", "§"));
             }
         }
         return false;

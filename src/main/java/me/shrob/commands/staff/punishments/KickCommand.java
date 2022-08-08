@@ -28,10 +28,10 @@ public class KickCommand implements CommandExecutor {
             player.kick();
             player.sendMessage("&b[" + player.getName() + "] " + "&aHas kicked " + kickedUser + "," +  "&cReason: " + args[1] );
         }else {
-            player.sendMessage(main.getConfig().getString("messages.nopermission").replace("%command%", "/kick").replace("<red>", "§c"));
+            player.sendMessage(main.getConfig().getString("messages.nopermission").replace("%command%", "/kick").replace("&", "§"));
         }
         if(!Bukkit.getOnlinePlayers().contains(kickedUser)) {
-            player.sendMessage(main.getConfig().getString("invaliduser").replace("<red>", "§c"));
+            player.sendMessage(main.getConfig().getString("invaliduser").replace("&", "§"));
         }
         return false;
     }

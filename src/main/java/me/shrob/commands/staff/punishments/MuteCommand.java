@@ -21,15 +21,12 @@ public class MuteCommand implements CommandExecutor {
         String kickedUser = args[0];
         if(command.getName().equalsIgnoreCase("mute")) {
             if(player.hasPermission("coreintegrals.comamnds.staff.punishments.mute")) {
-
-
-
                 if(!(sender instanceof Player)) {
                     sender.sendMessage(Utils.color("&b[CONSOLE] &ahas &cmuted " + "&e" + player.getName() + "&a!"));
                 }
 
             }else {
-                player.sendMessage(main.getConfig().getString("messages.nopermission").replace("%command%", "/mute").replace("<red>", "§c"));
+                player.sendMessage(main.getConfig().getString("messages.nopermission").replace("%command%", "/mute").replace("&", "§"));
             }
         }
         return false;

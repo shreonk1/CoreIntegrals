@@ -16,18 +16,18 @@ public class BroadCastCommand implements CommandExecutor {
         this.main = main;
     }
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+        Player player = (Player) sender;
         if(cmd.getName().equalsIgnoreCase("broadcast")) {
-            Player player = (Player) sender;
             if (player.hasPermission("coreintegrals.commands.broadcast")) {
                 if (args.length < 1) {
-                    player.sendMessage(main.getConfig().getString("messages.nomessagegiven").replace("<red>", "§c"));
+                    player.sendMessage(main.getConfig().getString("messages.nomessagegiven").replace("&", "§"));
                     return true;
                 }
                 String bc = String.join(" ", args);
                 bc = ChatColor.translateAlternateColorCodes('&', bc);
                 Bukkit.getServer().broadcastMessage(Utils.color("&6[Broadcast]" + bc));
             }else {
-                player.sendMessage(main.getConfig().getString("messages.nopermission").replace("<red>", "§c").replace("%command%", "/broadcast"));
+                player.sendMessage(main.getConfig().getString("messages.nopermission").replace("&", "§").replace("%command%", "/broadcast"));
             }
         }
         return true;

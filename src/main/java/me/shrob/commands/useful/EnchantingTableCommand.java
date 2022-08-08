@@ -21,7 +21,7 @@ public class EnchantingTableCommand implements CommandExecutor {
             if(player.hasPermission("coreintegrals.commands.useful.enchantingtable")) {
 
             }else {
-                player.sendMessage(main.getConfig().getString("nopermission").replace("%command%", "/enchantingtable").replace("<red>", "§c"));
+                player.sendMessage(main.getConfig().getString("nopermission").replace("%command%", "/enchantingtable").replace("&", "§"));
             }
         }
         return false;

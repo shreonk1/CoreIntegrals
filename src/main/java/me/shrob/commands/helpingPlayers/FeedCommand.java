@@ -22,7 +22,7 @@ public class FeedCommand implements CommandExecutor {
                 player.setFoodLevel(20);
                 player.sendMessage(Utils.color("&aYou have fed " + "&e" + player.getName()));
             }else {
-                player.sendMessage(main.getConfig().getString("messages.nopermission").replace("%command%", "/feed").replace("<red>", "§c"));
+                player.sendMessage(main.getConfig().getString("messages.nopermission").replace("%command%", "/feed").replace("&", "§"));
             }
         }
         return false;

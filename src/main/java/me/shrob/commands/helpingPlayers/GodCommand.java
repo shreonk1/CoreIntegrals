@@ -34,7 +34,7 @@ public class GodCommand implements CommandExecutor {
                     player.sendMessage(Utils.color("&aYour god mode has been turned on!"));
                 }
             }else {
-                player.sendMessage(main.getConfig().getString("messages.nopermission").replace("%command%", "/god").replace("<red>", "§c"));
+                player.sendMessage(main.getConfig().getString("messages.nopermission").replace("%command%", "/god").replace("&", "§"));
             }
         }
         return false;

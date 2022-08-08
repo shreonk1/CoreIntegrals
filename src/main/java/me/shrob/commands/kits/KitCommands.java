@@ -22,7 +22,7 @@ public class KitCommands implements CommandExecutor {
                 SelectKitGui kitselectiongui = new SelectKitGui();
                 kitselectiongui.createGui(player);
             }else {
-                player.sendMessage(main.getConfig().getString("messages.nopermission").replace("%command%", "/kits").replace("<red>", "§c"));
+                player.sendMessage(main.getConfig().getString("messages.nopermission").replace("%command%", "/kits").replace("&", "§"));
             }
         }
         return false;

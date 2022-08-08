@@ -22,7 +22,7 @@ public class OpenEnderchestCommand implements CommandExecutor {
                 Inventory enderchest = player.getEnderChest();
                 player.openInventory(enderchest);
             }else {
-                player.sendMessage(main.getConfig().getString("messages.nopermission").replace("%command%", "/openenderchest").replace("<red>","§c"));
+                player.sendMessage(main.getConfig().getString("messages.nopermission").replace("%command%", "/openenderchest").replace("&", "§"));
             }
         }
         return false;

@@ -1,10 +1,16 @@
 name: coreintegrals
-version: 1.2.2
+version: 1.2.3
 main: me.shrob.CoreIntegrals
 api-version: 1.19
 description: CoreIntegrals is a plugin for all of your servers essential commands, and needs!
 
 commands:
+  balance:
+    aliases:
+      - bal
+    description: displays players balance
+  sudo:
+    description: makes another player say something
   broadcast:
     description: broadcasts a message to the server
   broadcasthelp:
@@ -31,10 +37,21 @@ commands:
     description: Teleports a player to their last location
   ban:
     description: bans a specific user
+  setunbreakable:
+    description: sets held item to unbreakable
+  fix:
+    description: fixes the item you're holding
+    aliases:
+      - repair
   staffhelp:
     description: help menu for all staff perks.
   staffchat:
-    aliases: [staffc, sc, staffmsg, staffm, sm]
+    aliases:
+      - staffc
+      - sc
+      - staffmsg
+      - staffm
+      - sm
     description: custom staff chat
   god:
     description: makes a player invulnerable
@@ -53,8 +70,54 @@ commands:
   nickname:
     aliases: [nick]
     description: sets a players nickname
+  realname:
+    description: tells you the real ign of a user
   cireload:
     description: reloads the plugin config
+  workbench:
+    description: opens a crafting table through a command
+  enchantingtable:
+    description: opens an enchanting table through a command
+  cenchant:
+    description: allows enchanting above the usual minecraft level
+  fly:
+    description: sets the player to fly
+  money:
+    description: allows for changes within peoples balances
+  debugstick:
+    description: gives a player a debugstick
+  barrier:
+    description: gives a player a barrier
+  lightblock:
+    description: gives a player a lightblock
+  gamemodesurvival:
+    description: sets a user to gamemode survival
+    aliases:
+      - gms
+      - gamemodes
+      - gmsurvival
+  gamemodecreative:
+    description: sets a user to gamemode creative
+    aliases:
+      - gmc
+      - gamemodec
+      - gmcreative
+  gamemodespectator:
+    description: sets a user to gamemode spectator
+    aliases:
+      - gmsp
+      - gamemodesp
+      - gmspectator
+  gamemodeadventure:
+    description: sets a user to gamemode adventure
+    aliases:
+      - gma
+      - gamemodea
+      - gmadventure
+  vanish:
+    description: hides a player from everyone except someone with the vanish permission
+    aliases:
+      - v
 
 permissions:
   coreintegrals.*:
@@ -66,6 +129,9 @@ permissions:
   coreintegrals.commands.gamemode.opengui:
     description: opens the gui for the gamemode change
     default: op
+  coreintegrals.commands.gamemode.changegamemode:
+    description: permission to use the gamemode changing commands
+    default: false
   coreintegrals.commands.gamemode.*:
     description: permission to all custom gamemode commands
     default: op
@@ -135,3 +201,33 @@ permissions:
   coreintegrals.commands.funstuff.nickname:
     description: sets a players nickname
     default: false
+  coreintegrals.commands.useful.realname:
+    description: tells a user the real ign of a player
+    default: true
+  coreintegrals.commands.useful.workbench:
+    description: opens a crafting table through a command
+    default: true
+  coreintegrals.commands.useful.enchantingtable:
+    description: opens an enchanting tavble through a command
+    default: true
+  coreintegrals.commands.useful.unbreakable:
+    description: sets the held item to unbreakable
+    default: op
+  coreintegrals.commands.useful.fix:
+    description: fixes the item you're holding
+    default: false
+  coreintegrals.commands.items.debugstick:
+    description: gives a player a debugstick
+    default: op
+  coreintegrals.commands.items.barrier:
+    description: gives a player a barrier
+    default: op
+  coreintegrals.commands.staff.vanish:
+    description: hides the player from everyone except who has the vanish permission
+    default: op
+  coreintegrals.commands.helpingplayers.fly:
+    description: sets the player to fly
+    default: true
+  coreintegrals.commands.staff.sudo:
+    description: makes another player say something
+    default: op

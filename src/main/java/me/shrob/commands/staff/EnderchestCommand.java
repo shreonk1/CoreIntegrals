@@ -22,14 +22,14 @@ public class EnderchestCommand implements CommandExecutor {
             Player player = (Player) sender;
             String playerName = args[0];
             if(!Bukkit.getOnlinePlayers().contains(playerName)) {
-                player.sendMessage(main.getConfig().getString("invaliduser").replace("<red>", "§c"));
+                player.sendMessage(main.getConfig().getString("invaliduser").replace("&", "§"));
             }
             if(player.hasPermission("coreintegrals.commands.staff.enderchest")) {
                 Inventory enderchest = player.getEnderChest();
                 player.openInventory(enderchest);
                 player.sendMessage(Utils.color("&aYou are currently editing: " + "&b" + player.getName() + "'s " + "&aenderchest!"));
             }else {
-                player.sendMessage(main.getConfig().getString("messages.nopermission").replace("%command%", "/enderchest").replace("<red>", "§c"));
+                player.sendMessage(main.getConfig().getString("messages.nopermission").replace("%command%", "/enderchest").replace("&", "§"));
             }
         }
         return false;

@@ -15,10 +15,7 @@ import me.shrob.commands.kits.KitCommands;
 import me.shrob.commands.money.BalanceCommand;
 import me.shrob.commands.money.MoneyCommands;
 import me.shrob.commands.permissions.PermissionMenuInv;
-import me.shrob.commands.staff.EnderchestCommand;
-import me.shrob.commands.staff.InventorySeeCommand;
-import me.shrob.commands.staff.ReloadCommand;
-import me.shrob.commands.staff.StaffChatCommand;
+import me.shrob.commands.staff.*;
 import me.shrob.commands.staff.punishments.BanCommand;
 import me.shrob.commands.staff.punishments.FreezeCommand;
 import me.shrob.commands.useful.*;
@@ -43,23 +40,30 @@ import org.bukkit.scoreboard.Score;
 import org.bukkit.scoreboard.ScoreboardManager;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.logging.Logger;
 
 public final class CoreIntegrals extends JavaPlugin implements Listener {
+
+    public ArrayList<Player> vanishPlayers = new ArrayList<>();
 
     String nopermissionmessage;
     String nonicknamegivenmessage;
     String reloadpluginmessage;
     String invalidcommandmessage;
     String nomessagegiven;
+    String nousermessage;
     String invalidusermessage;
     String invalidreasonmessage;
     String playerafkmessage;
     String playernotafkmessage;
     String youareafkmessage;
+    String playerofflinemessage;
     String youarenotafkmessage;
     String vanishmessage;
     String unvanishmessage;
+    String playervanishmessage;
+    String playerunvanishmessage;
     String scoreboardTitle;
     String scoreboardLine1;
     String scoreboardLine2;
@@ -71,7 +75,7 @@ public final class CoreIntegrals extends JavaPlugin implements Listener {
     String notenoughmoneymessage;
 
     private static final Logger log = Logger.getLogger("Minecraft");
-    public File commandsfile = new File(getDataFolder(), "commands.yml");
+    public File commandsFile = new File(getDataFolder(), "commands.yml");
     public FileConfiguration commandsFileConfig;
     public static Economy economy = null;
 
@@ -81,7 +85,7 @@ public final class CoreIntegrals extends JavaPlugin implements Listener {
         getConfig().options().copyDefaults(true);
         saveConfig();
 
-        if (!commandsfile.exists()) {
+        if (!commandsFile.exists()) {
             saveResource("commands.yml", false);
         }
 
@@ -106,7 +110,9 @@ public final class CoreIntegrals extends JavaPlugin implements Listener {
         getCommand("openenderchest").setExecutor(new OpenEnderchestCommand(this));
         getCommand("heal").setExecutor(new HealCommand(this));
         getCommand("nickname").setExecutor(new NickNameCommand(this));
+        getCommand("realname").setExecutor(new RealNameCommand(this));
         getCommand("feed").setExecutor(new FeedCommand(this));
+        getCommand("fly").setExecutor(new FlyCommand(this));
         getCommand("back").setExecutor(new BackCommand(this));
         getCommand("ban").setExecutor(new BanCommand(this));
         getCommand("god").setExecutor(new GodCommand(this));
@@ -128,6 +134,8 @@ public final class CoreIntegrals extends JavaPlugin implements Listener {
         getCommand("gamemodesurvival").setExecutor(new GamemodeSurvival(this));
         getCommand("gamemodespectator").setExecutor(new GamemodeSpectator(this));
         getCommand("gamemodeadventure").setExecutor(new GamemodeAdventure(this));
+        getCommand("vanish").setExecutor(new VanishCommand(this));
+        getCommand("sudo").setExecutor(new SudoCommand(this));
         getServer().getPluginManager().registerEvents(new ScoreboardClass(this), this);
         getServer().getPluginManager().registerEvents(new PlayerMoveListener(), this);
         getServer().getPluginManager().registerEvents(new GamemodeGUIClickListener(), this);
@@ -136,6 +144,7 @@ public final class CoreIntegrals extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new BackCommand(this), this);
         getServer().getPluginManager().registerEvents(new InvSeeListener(), this);
         getServer().getPluginManager().registerEvents(new PlayerMoveListener(), this);
+        getServer().getPluginManager().registerEvents(new VanishChecker(this), this);
 
         /*
         getCommand("setMotd").setExecutor(new setMotd(this));
@@ -169,9 +178,15 @@ public final class CoreIntegrals extends JavaPlugin implements Listener {
         this.reloadpluginmessage = getConfig().getString("messages.reloadplugin");
         this.invalidcommandmessage = getConfig().getString("messages.invalidcommand");
         this.nomessagegiven = getConfig().getString("messages.nomessagegiven");
+        this.playerofflinemessage = getConfig().getString("messages.playeroffline");
         this.invalidreasonmessage = getConfig().getString("messages.invalidreason");
         this.invalidusermessage = getConfig().getString("messages.invaliduser");
+        this.nousermessage = getConfig().getString("messages.nouser");
         this.playernotafkmessage = getConfig().getString("messages.playernotafk");
+        this.vanishmessage = getConfig().getString("messages.vanish");
+        this.unvanishmessage = getConfig().getString("messages.unvanish");
+        this.playervanishmessage = getConfig().getString("messages.playerjustvanished");
+        this.playerunvanishmessage = getConfig().getString("messages.playerjustunvanished");
         this.scoreboardTitle = getConfig().getString("scoreboard.scoreboardtitle");
         this.scoreboardLine1 = getConfig().getString("scoreboard.scoreboardline1");
         this.scoreboardLine2 = getConfig().getString("scoreboard.scoreboardline2");

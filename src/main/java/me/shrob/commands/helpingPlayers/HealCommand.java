@@ -23,7 +23,7 @@ public class HealCommand implements CommandExecutor {
                 player.setHealth(20);
                 player.sendMessage(Utils.color("&aYou have healed " + "&e" + player.getName()));
             } else {
-                player.sendMessage(main.getConfig().getString("messages.nopermission").replace("%command%", "/heal").replace("<red>", "§c"));
+                player.sendMessage(main.getConfig().getString("messages.nopermission").replace("%command%", "/heal").replace("&", "§"));
             }
         }
         return false;

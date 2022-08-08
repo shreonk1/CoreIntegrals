@@ -31,7 +31,7 @@ public class FreezeCommand implements CommandExecutor {
                     player.sendTitle(Utils.color("&cFrozen!"), Utils.color("&aYou have been frozen, behave next time!"), 20, 80, 40);
                 }
             } else {
-                player.sendMessage(main.getConfig().getString("messages.nopermission").replace("%command%", "/freeze").replace("<red>", "§c"));
+                player.sendMessage(main.getConfig().getString("messages.nopermission").replace("%command%", "/freeze").replace("&", "§"));
             }
         }
         return false;

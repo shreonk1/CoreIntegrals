@@ -26,7 +26,7 @@ public class BroadCastOnScreen implements CommandExecutor {
                     player.sendTitle(Utils.color("&2[Server Broadcast]"), Utils.color(broadcastTitle), 20, 80, 40);
                 }
             }else {
-                sender.sendMessage(main.getConfig().getString("messages.nopermission").replace("%command%", "/screenbroadcast").replace("<red>", "§c"));
+                sender.sendMessage(main.getConfig().getString("messages.nopermission").replace("%command%", "/screenbroadcast").replace("&", "§"));
             }
         }
         return false;

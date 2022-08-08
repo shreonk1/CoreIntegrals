@@ -40,12 +40,12 @@ public class BanCommand implements CommandExecutor {
                 player.sendMessage(Utils.color("&b[" + player.getName() + "] " + "&aHas banned " + bannedUser + "," +  "&cReason: " + reason ));
             }
             if(!Bukkit.getOnlinePlayers().contains(Bukkit.getPlayer(bannedUser))) {
-                player.sendMessage(main.getConfig().getString("invaliduser").replace("<red>", "§c"));
+                player.sendMessage(main.getConfig().getString("invaliduser").replace("&", "§"));
             }else if(length < 2) {
-                player.sendMessage(main.getConfig().getString("invalidreason").replace("<red>", "§c"));
+                player.sendMessage(main.getConfig().getString("invalidreason").replace("&", "§"));
             }
         }else {
-            player.sendMessage(main.getConfig().getString("messages.nopermission").replace("%command%", "/ban").replace("<red>", Utils.color("&c")));
+            player.sendMessage(main.getConfig().getString("messages.nopermission").replace("%command%", "/ban").replace("&", "§"));
         }
         return false;
     }
