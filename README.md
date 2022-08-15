@@ -52,28 +52,28 @@ This plugin requires Vault to use due to economical commands!
   
 ## Config Messages:
 - nonicknamegiven: "&cThis is not a valid nickname!"
-  reloadplugin: "&aPlugin reloaded"
-  invalidcommand: "&cInvalid Command!"
-  nopermission: "&cYou do not have permission to use %command%!"
-  nomessagegiven: "&cYou did not include a message!"
-  nouser: "&cNo user provided"
-  playeroffline: "&c%player% is not online"
-  invaliduser: "&cInvalid user!"
-  invalidreason: "&cInvalid reason!"
-  playerafk: "&3%player% is currently afk."
-  playernotafk: "&3%player% is not afk."
-  youareafk: "&3You are currently afk."
-  youarenotafk: "&3You are no lonegr afk."
-  vanish: "&aYou are now in vanish!"
-  playerjustvanished: "&a%player% just vanished!"
-  playerjustunvanished: "&a%player% just unvanished!"
-  unvanish: "&a You are no longer in vanish!"
-  fix: "&3Fixed &a%helditem% &3for $5000"
-  notenoughmoney: "&cYou do not have enough money to do this!"
-  spawnset: "&a You have set the current spawn point to: %x, %y%, %z%"
-####Changing the & code will change the color of the message!
+- reloadplugin: "&aPlugin reloaded"
+- invalidcommand: "&cInvalid Command!"
+- nopermission: "&cYou do not have permission to use %command%!"
+- nomessagegiven: "&cYou did not include a message!"
+- nouser: "&cNo user provided"
+- playeroffline: "&c%player% is not online"
+- invaliduser: "&cInvalid user!"
+- invalidreason: "&cInvalid reason!"
+- playerafk: "&3%player% is currently afk."
+- playernotafk: "&3%player% is not afk."
+- youareafk: "&3You are currently afk."
+- youarenotafk: "&3You are no lonegr afk."
+- vanish: "&aYou are now in vanish!"
+- playerjustvanished: "&a%player% just vanished!"
+- playerjustunvanished: "&a%player% just unvanished!"
+- unvanish: "&a You are no longer in vanish!"
+- fix: "&3Fixed &a%helditem% &3for $5000"
+- notenoughmoney: "&cYou do not have enough money to do this!"
+- spawnset: "&a You have set the current spawn point to: %x, %y%, %z%"
+#### Changing the & code will change the color of the message!
 
 ## Links or socials:
-###Discord server with github updates: [[https://discord.gg/b7q6GRKQXp](https://discord.gg/b7q6GRKQXp)]
-###My discord: Shrob#6875 (Please message me in either me or my discord if you have feedback!)
-###Github: [[https://github.com/shreonk1](https://github.com/shreonk1)]
+### Discord server with github updates: [[https://discord.gg/b7q6GRKQXp](https://discord.gg/b7q6GRKQXp)]
+### My discord: Shrob#6875 (Please message me in either me or my discord if you have feedback!)
+### Github: [[https://github.com/shreonk1](https://github.com/shreonk1)]
